@@ -20,8 +20,8 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
  */
 public class GalleryActivity extends BaseActivity {
 
-    ImageView mImageView;
-    Gallery mGallery;
+    private ImageView mImageView;
+    private Gallery mGallery;
 
 
     @Override

@@ -19,52 +19,52 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 
 public class PopupWindowActivity extends BaseActivity {
 
-    Button contextButton;
-    Button activityButton;
+    private Button mContextButton;
+    private Button mActivityButton;
 
-    PopupWindow contextPopupWindow;
-    PopupWindow activityPopupWindow;
+    private PopupWindow mContextPopupWindow;
+    private PopupWindow mActivityPopupWindow;
 
-    TextView contextPopupName;
-    TextView activityPopupName;
+    private TextView mContextPopupName;
+    private TextView mActivityPopupName;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popup_test);
 
-        contextPopupName = (TextView) findViewById(R.id.context_popup_name);
-        activityPopupName = (TextView) findViewById(R.id.activity_popup_name);
+        mContextPopupName = (TextView) findViewById(R.id.context_popup_name);
+        mActivityPopupName = (TextView) findViewById(R.id.activity_popup_name);
 
-        contextPopupWindow = new PopupWindow(LayoutInflater.from(this.getApplicationContext()).inflate(R.layout.popup_test, null), 400, 400);
-        contextPopupWindow.setOutsideTouchable(true);
+        mContextPopupWindow = new PopupWindow(LayoutInflater.from(this.getApplicationContext()).inflate(R.layout.popup_test, null), 400, 400);
+        mContextPopupWindow.setOutsideTouchable(true);
 
-        contextButton = (Button) findViewById(R.id.context_button);
-        contextButton.setOnClickListener(new View.OnClickListener() {
+        mContextButton = (Button) findViewById(R.id.context_button);
+        mContextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contextPopupWindow.showAsDropDown(contextButton);
+                mContextPopupWindow.showAsDropDown(mContextButton);
 
             }
         });
 
 
-        activityPopupWindow = new PopupWindow(LayoutInflater.from(this).inflate(R.layout.popup_test, null), 400, 400);
-        activityPopupWindow.setOutsideTouchable(true);
+        mActivityPopupWindow = new PopupWindow(LayoutInflater.from(this).inflate(R.layout.popup_test, null), 400, 400);
+        mActivityPopupWindow.setOutsideTouchable(true);
 
-        activityButton = (Button) findViewById(R.id.activity_button);
-        activityButton.setOnClickListener(new View.OnClickListener() {
+        mActivityButton = (Button) findViewById(R.id.activity_button);
+        mActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                activityPopupWindow.showAsDropDown(activityButton);
+                mActivityPopupWindow.showAsDropDown(mActivityButton);
             }
         });
 
         findViewById(R.id.dismiss).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contextPopupWindow.dismiss();
-                activityPopupWindow.dismiss();
+                mContextPopupWindow.dismiss();
+                mActivityPopupWindow.dismiss();
             }
         });
 

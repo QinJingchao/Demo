@@ -49,7 +49,7 @@ import touch.wireless.tmall.com.tmtouchsdk.data.TestData;
 
 public class TestDataAdapter extends BaseAdapter {
 
-    TestData[] testDatas = new TestData[]{
+    private TestData[] mTestDatas = new TestData[]{
             new TestData("OverDraw", OverDrawActivity.class),
             new TestData("TabActivity", TabActivityActivity.class),
             new TestData("Sliding View", SlidingPanelActivity.class),
@@ -91,12 +91,12 @@ public class TestDataAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return testDatas.length;
+        return mTestDatas.length;
     }
 
     @Override
     public Object getItem(int position) {
-        return testDatas[position];
+        return mTestDatas[position];
     }
 
     @Override
@@ -111,7 +111,7 @@ public class TestDataAdapter extends BaseAdapter {
             convertView.setTag(new ViewHolder((TextView) convertView));
         }
         ViewHolder holder = (ViewHolder) convertView.getTag();
-        holder.textView.setText(testDatas[position].getName());
+        holder.textView.setText(mTestDatas[position].getName());
         return convertView;
     }
 

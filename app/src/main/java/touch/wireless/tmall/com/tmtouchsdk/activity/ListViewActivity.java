@@ -18,22 +18,22 @@ import touch.wireless.tmall.com.tmtouchsdk.adapter.ListViewAdapter;
 
 public class ListViewActivity extends BaseActivity {
 
-    private ListView listView;
+    private ListView mListView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_test);
-        listView = (ListView) findViewById(R.id.listview);
-        listView.setAdapter(new ListViewAdapter());
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListView = (ListView) findViewById(R.id.listview);
+        mListView.setAdapter(new ListViewAdapter());
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(ListViewActivity.this, "item click position:" + position, Toast.LENGTH_SHORT).show();
             }
         });
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(ListViewActivity.this, "item long click position:" + position, Toast.LENGTH_SHORT).show();

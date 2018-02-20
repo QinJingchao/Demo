@@ -18,14 +18,14 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 // TODO: 17/2/24 设备兼容性问题需要处理
 public class DialogActivity extends BaseActivity implements View.OnClickListener {
 
-    TextView textView1;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_test);
-        textView1 = (TextView) findViewById(R.id.textview);
-        textView1.setOnClickListener(this);
+        mTextView = (TextView) findViewById(R.id.textview);
+        mTextView.setOnClickListener(this);
     }
 
     @Override

@@ -15,8 +15,8 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 
 public class TenActivity extends BaseActivity implements View.OnClickListener {
 
-    View nextPage;
-    View prePage;
+    private View mNextPage;
+    private View mPrePage;
 
 
     @Override
@@ -24,11 +24,11 @@ public class TenActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ten_test);
 
-        nextPage = findViewById(R.id.button_next);
-        nextPage.setOnClickListener(this);
+        mNextPage = findViewById(R.id.button_next);
+        mNextPage.setOnClickListener(this);
 
-        prePage = findViewById(R.id.button_back);
-        prePage.setOnClickListener(this);
+        mPrePage = findViewById(R.id.button_back);
+        mPrePage.setOnClickListener(this);
 
     }
 

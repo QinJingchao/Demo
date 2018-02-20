@@ -20,16 +20,16 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 public class EditTextActivity extends BaseActivity {
 
     private static final String TAG = "EditTextActivity";
-    TextView textView;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_test);
-        textView = (TextView) findViewById(R.id.editview);
+        mTextView = (TextView) findViewById(R.id.editview);
 
-        textView.setBackgroundDrawable(new StateListDrawable());
-        textView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mTextView.setBackgroundDrawable(new StateListDrawable());
+        mTextView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 doNothing();
@@ -38,9 +38,9 @@ public class EditTextActivity extends BaseActivity {
         });
 
 
-        textView = (TextView) findViewById(R.id.editview2);
+        mTextView = (TextView) findViewById(R.id.editview2);
 
-        textView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        mTextView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 doNothing();

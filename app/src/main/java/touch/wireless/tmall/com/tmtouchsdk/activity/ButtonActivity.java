@@ -21,16 +21,16 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 
 public class ButtonActivity extends BaseActivity implements View.OnClickListener, View.OnLongClickListener {
 
-    Button button1;
+    private Button mButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acivtity_button_test);
 
-        button1 = (Button) findViewById(R.id.button1);
+        mButton = (Button) findViewById(R.id.button1);
 
-        ViewGroup viewGroup = (ViewGroup) button1.getParent();
+        ViewGroup viewGroup = (ViewGroup) mButton.getParent();
 
         for (int i = 0, size = viewGroup.getChildCount(); i < size; i++) {
             View child = viewGroup.getChildAt(i);
@@ -38,7 +38,7 @@ public class ButtonActivity extends BaseActivity implements View.OnClickListener
             child.setOnLongClickListener(this);
         }
 
-        button1.setOnLongClickListener(new View.OnLongClickListener() {
+        mButton.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 throw new NullPointerException();

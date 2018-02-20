@@ -17,7 +17,7 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 
 public class UCWebViewActivity extends BaseActivity {
 
-    private WebView webView;
+    private WebView mWebView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,10 +26,10 @@ public class UCWebViewActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_uc_webview_test);
-        webView = (WebView) findViewById(R.id.webview);
-        webView.setWebChromeClient(new WVUCWebChromeClient());
-        webView.setWebViewClient(new WVUCWebViewClient(this));
-        webView.loadUrl("https://mbd.baidu.com/webpage?action=icard&type=subscribe&channel=wise_home");
+        mWebView = (WebView) findViewById(R.id.webview);
+        mWebView.setWebChromeClient(new WVUCWebChromeClient());
+        mWebView.setWebViewClient(new WVUCWebViewClient(this));
+        mWebView.loadUrl("https://mbd.baidu.com/webpage?action=icard&type=subscribe&channel=wise_home");
 
     }
 }

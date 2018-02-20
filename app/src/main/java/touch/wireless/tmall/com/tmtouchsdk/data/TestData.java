@@ -8,29 +8,29 @@ import android.app.Activity;
 
 public class TestData {
 
-    private String name;
-    private Class<? extends Activity> target;
+    private String mName;
+    private Class<? extends Activity> mTarget;
 
     public TestData(String name, Class<? extends Activity> target) {
-        this.name = name;
-        this.target = target;
+        this.mName = name;
+        this.mTarget = target;
     }
 
     public String getName() {
-        return name;
+        return mName;
     }
 
     public TestData setName(String name) {
-        this.name = name;
+        this.mName = name;
         return this;
     }
 
     public Class getTarget() {
-        return target;
+        return mTarget;
     }
 
     public TestData setTarget(Class target) {
-        this.target = target;
+        this.mTarget = target;
         return this;
     }
 }

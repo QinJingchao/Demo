@@ -18,7 +18,7 @@ import touch.wireless.tmall.com.tmtouchsdk.activity.EditTextActivity;
 
 public class TestFragment extends Fragment {
 
-    View contentView = null;
+    private View mContentView = null;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -29,9 +29,9 @@ public class TestFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        if (contentView == null) {
-            contentView = inflater.inflate(R.layout.fragment_test, container, false);
-            contentView.setOnClickListener(new View.OnClickListener() {
+        if (mContentView == null) {
+            mContentView = inflater.inflate(R.layout.fragment_test, container, false);
+            mContentView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(TestFragment.this.getActivity(), EditTextActivity.class);
@@ -39,6 +39,6 @@ public class TestFragment extends Fragment {
                 }
             });
         }
-        return contentView;
+        return mContentView;
     }
 }

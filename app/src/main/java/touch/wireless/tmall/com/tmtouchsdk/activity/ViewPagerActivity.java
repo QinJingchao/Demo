@@ -20,8 +20,8 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 public class ViewPagerActivity extends BaseActivity {
 
 
-    private ViewPager pager = null;
-    private ViewPagerAdapter adapter = null;
+    private ViewPager mPager = null;
+    private ViewPagerAdapter mAdapter = null;
     //数据源
 //    private List<View> viewList = null;
 //    private List<String> titleList = null;
@@ -32,13 +32,13 @@ public class ViewPagerActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_pager_test);
         initViews();
-        adapter = new ViewPagerAdapter();
-        pager.setAdapter(adapter);
+        mAdapter = new ViewPagerAdapter();
+        mPager.setAdapter(mAdapter);
 
     }
 
     private void initViews() {
-        pager = (ViewPager) findViewById(R.id.view_pager);
+        mPager = (ViewPager) findViewById(R.id.view_pager);
     }
 
 }

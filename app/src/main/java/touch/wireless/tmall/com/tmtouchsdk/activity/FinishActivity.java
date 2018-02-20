@@ -15,16 +15,16 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 
 public class FinishActivity extends BaseActivity {
 
-    TextView textView;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_test);
-        textView = (TextView) findViewById(R.id.textview);
-        textView.setText("Finish Activity");
+        mTextView = (TextView) findViewById(R.id.textview);
+        mTextView.setText("Finish Activity");
 
-        textView.setOnClickListener(new View.OnClickListener() {
+        mTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FinishActivity.this.finish();

@@ -14,17 +14,16 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
  * Created by liangjianzhao on 17/2/22.
  */
 public class CheckBoxActivity extends BaseActivity {
-    CheckBox button1;
-    CheckBox button2;
+    private CheckBox mCheckBox1;
+    private CheckBox mCheckBox2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acivtity_checkbutton_test);
 
-        button1 = (CheckBox) findViewById(R.id.checkBox1);
-
-        button1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mCheckBox1 = (CheckBox) findViewById(R.id.checkBox1);
+        mCheckBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //  buttonView.setChecked(isChecked);
@@ -32,9 +31,8 @@ public class CheckBoxActivity extends BaseActivity {
             }
         });
 
-        button2 = (CheckBox) findViewById(R.id.checkBox2);
-
-        button2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        mCheckBox2 = (CheckBox) findViewById(R.id.checkBox2);
+        mCheckBox2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 //  buttonView.setChecked(isChecked);

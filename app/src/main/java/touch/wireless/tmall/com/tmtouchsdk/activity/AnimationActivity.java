@@ -18,44 +18,7 @@ public class AnimationActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_animation_test);
-
-        final View view = findViewById(R.id.animation);
-
-//        ObjectAnimator anim = ObjectAnimator
-//                .ofFloat(view, "alpha", 1.0F, 0.0F)
-//                .setDuration(500);
-//
-//        anim.addListener(new Animator.AnimatorListener() {
-//            @Override
-//            public void onAnimationStart(Animator animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationEnd(Animator animation) {
-//                view.setAlpha(0.5f);
-//                ObjectAnimator anim = ObjectAnimator
-//                        .ofFloat(view, "alpha", 1.0F, 0.0F)
-//                        .setDuration(5000);
-//
-//                anim.init();
-//            }
-//
-//            @Override
-//            public void onAnimationCancel(Animator animation) {
-//
-//            }
-//
-//            @Override
-//            public void onAnimationRepeat(Animator animation) {
-//
-//            }
-//        });
-//
-//        anim.init();
-
     }
 
 
@@ -65,11 +28,11 @@ public class AnimationActivity extends Activity {
 
         final View view = findViewById(R.id.animation);
 
-        ObjectAnimator anim = ObjectAnimator
+        ObjectAnimator objectAnimator = ObjectAnimator
                 .ofFloat(view, "scaleX", 1.0F, 0.0F)
                 .setDuration(5000);
 
-        anim.addListener(new Animator.AnimatorListener() {
+        objectAnimator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
 
@@ -96,6 +59,6 @@ public class AnimationActivity extends Activity {
             }
         });
 
-        anim.start();
+        objectAnimator.start();
     }
 }

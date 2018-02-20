@@ -12,7 +12,7 @@ import android.support.annotation.Nullable;
 
 public class OOMTestActivity extends Activity {
 
-    byte[] bytes = new byte[4 * 1024 * 1024];
+    private byte[] mBytes = new byte[4 * 1024 * 1024];
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

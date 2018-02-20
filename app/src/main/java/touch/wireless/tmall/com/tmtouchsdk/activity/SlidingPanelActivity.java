@@ -16,13 +16,13 @@ import com.tmall.R;
 
 public class SlidingPanelActivity extends Activity implements View.OnClickListener {
 
-    SlidingPaneLayout slidingPaneLayout;
+    SlidingPaneLayout mSlidingPaneLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding_panel_test);
-        slidingPaneLayout = (SlidingPaneLayout) findViewById(R.id.sliding_layout);
+        mSlidingPaneLayout = (SlidingPaneLayout) findViewById(R.id.sliding_layout);
 
         findViewById(R.id.text1).setOnClickListener(this);
         findViewById(R.id.text2).setOnClickListener(this);
@@ -33,6 +33,6 @@ public class SlidingPanelActivity extends Activity implements View.OnClickListen
     @Override
     public void onClick(View v) {
         Toast.makeText(this, ((TextView) v).getText(), Toast.LENGTH_LONG).show();
-        slidingPaneLayout.openPane();
+        mSlidingPaneLayout.openPane();
     }
 }

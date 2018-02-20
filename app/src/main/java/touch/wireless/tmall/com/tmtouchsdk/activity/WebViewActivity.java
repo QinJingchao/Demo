@@ -18,7 +18,7 @@ import touch.wireless.tmall.com.tmtouchsdk.base.BaseActivity;
 
 public class WebViewActivity extends BaseActivity {
 
-    private WebView webView;
+    private WebView mWebView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,12 +27,12 @@ public class WebViewActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_webview_test);
-        webView = (WebView) findViewById(R.id.webview);
+        mWebView = (WebView) findViewById(R.id.webview);
 //        webView.setFocusable(false);
 //        webView.setFocusableInTouchMode(false);
 //        webView.setWebChromeClient(new WebChromeClient());
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://m.baidu.com");
+        mWebView.setWebViewClient(new WebViewClient());
+        mWebView.loadUrl("https://m.baidu.com");
 
     }
 }

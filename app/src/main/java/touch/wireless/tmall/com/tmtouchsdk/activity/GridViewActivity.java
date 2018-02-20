@@ -18,30 +18,14 @@ import touch.wireless.tmall.com.tmtouchsdk.adapter.ListViewAdapter;
 
 public class GridViewActivity extends Activity {
 
-    private GridView gridView;
+    private GridView mGridView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grid_test);
-        gridView = (GridView) findViewById(R.id.gridview);
-        gridView.setAdapter(new ListViewAdapter());
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(GridViewActivity.this, "item click position:" + position, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-//        gridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(GridViewActivity.this, "item long click position:" + position, Toast.LENGTH_SHORT).show();
-//                return false;
-//            }
-//        });
-
-
+        mGridView = (GridView) findViewById(R.id.gridview);
+        mGridView.setAdapter(new ListViewAdapter());
     }
 
 }
