@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion Integer.parseInt(System.properties['compileSdkVersion'])
+    buildToolsVersion System.properties['buildToolsVersion']
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+
+    compile('com.taobao.android:windvane:8.3.0.5-U4@jar') {
+        transitive = true
+        exclude group: 'com.alibaba', module: 'fastjson'
+    }
+
+//    compile project(':scriptmanager')
+//    compile project(':telescope_ui')
+
+//    compile 'com.taobao.android:telescopesdk:1.1.0.26@aar'
+//    compile 'com.taobao.android:telescopebase:1.1.0.26@aar'
+//
+//    compile('com.taobao.android:windvane:8.3.0.5-U4@jar')
+//
+//    compile 'com.taobao.android:crashreporter:3.0.1.1@aar'
+//    compile project(':spider_ucwebview')
+    testCompile 'junit:junit:4.12'
+//    compile project(':touchsdk_ucwebview')
+//    compile project(':spider_plugins')
+//    compile project(':spider')
+//    compile project(':androidPluginFramework')
+
+//    compile project(':test')
+//
+    compile project(':ha_watchmem')
+
+//    compile('com.alibaba.android:alibaton4android:1.0.3.16@aar')
+
+    compile 'com.android.support:appcompat-v7:23.1.1'
+//    compile 'com.android.support:support-core-utils:23.4.0'
+//    compile 'com.android.support:support-dynamic-animation:25.3.1'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+
+//    compile 'com.taobao.android:uikit_extends:2.8.7.8@aar'
+//    compile project(':DebugSetting')
+
+//    compile 'com.tmall.android:TBStmallandroid_common:3.0.2.148@aar'
+//    compile 'com.tmall.android:tmallandroid_launcher:1.0.9.262@aar'
+//    compile 'com.taobao.android:crashreporter:3.0.1.1@aar'
+
+//    compile 'com.taobao.android:atlas_core:5.0.7.52@aar'
+
+//    compile project(path: ':androidPluginFramework')
+
+//    compile project(path: ':telescope_offline_windvane')
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url 'http://mvnrepo.alibaba-inc.com/mvn/repository' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        jcenter()
+    }
+    dependencies {
+        def path = System.properties['classpatch']
+        classpath(path ? path : "com.android.tools.build:gradle:2.3.0")
+    }
+}
+
+
+
+allprojects {
+    repositories {
+        mavenLocal()
+        maven { url 'http://mvnrepo.alibaba-inc.com/mvn/repository' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        jcenter()
+    }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tmall">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:name="touch.wireless.tmall.com.tmtouchsdk.EventApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="touch.wireless.tmall.com.tmtouchsdk.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ActionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.test" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ButtonActivity"></activity>
+        <activity
+            android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ProcessActivity"
+            android:process=":second"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.OverDrawActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.AnimationActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.DialogActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ListViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.GridViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.RadioButtonActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.CheckBoxActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.RecyclerViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.TabActivityActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.SlidingPanelActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.TextViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.OOMTestActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.GalleryActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.NestedScrollViewActivity"></activity>
+        <activity
+            android:name="touch.wireless.tmall.com.tmtouchsdk.activity.EditTextActivity"
+            android:imeOptions="actionSearch"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.WebViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.UCWebViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.WindowManagerActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ScrollViewActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.FinishActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ServiceActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.PopupWindowActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ImageActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.ViewPagerActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.PageEnterSourceActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.PageEnterTargetActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.SimpleSmartActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.MultiActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.PermissionActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.FragmentTestActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.SystemFragmentActivity"></activity>
+        <activity android:name="touch.wireless.tmall.com.tmtouchsdk.activity.TenActivity"></activity>
+
+        <service android:name="touch.wireless.tmall.com.tmtouchsdk.service.WindowManagerService"></service>
+        <receiver android:name="touch.wireless.tmall.com.tmtouchsdk.receiver.TestReceiver"></receiver>
+    </application>
+
+</manifest>

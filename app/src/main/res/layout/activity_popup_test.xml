@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/context_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Context PopupWindow Show" />
+
+    <Button
+        android:id="@+id/activity_button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Activity PopupWindow Show" />
+
+    <Button
+        android:id="@+id/dismiss"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="PopupWindow Dismiss " />
+
+    <TextView
+        android:id="@+id/context_popup_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="context_popup_name" />
+
+    <TextView
+        android:id="@+id/activity_popup_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="activity_popup_name" />
+
+</LinearLayout>

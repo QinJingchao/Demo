@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <touch.wireless.tmall.com.tmtouchsdk.view.TestButton
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="40dp"
+        android:text="Button1" />
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button2" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button3"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button3" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button4" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button5"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button5" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button6"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button6" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button7"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button7" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button8"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button8" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button9"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button9" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:id="@+id/button10"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button10" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button11" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="Button12" />-->
+
+    <!--<touch.wireless.tmall.com.tmtouchsdk.view.TestButton-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:text="TestButton13" />-->
+
+</LinearLayout>
